@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "origin"]
+	url = https://github.com/SREEKANTH257/DevOps-basic-flask-project.git
+	fetch = +refs/*:refs/*
+	mirror = true
