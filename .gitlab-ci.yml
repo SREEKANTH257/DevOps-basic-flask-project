@@ -1,0 +1,10 @@
+stages:
+  - test
+
+health_check:
+  stage: test
+  script:
+    - python3 AutomationONkube.py
+  tags:
+    - your-runner-tag  # Replace with your actual GitLab runner tag, or remove if not using tags
+
