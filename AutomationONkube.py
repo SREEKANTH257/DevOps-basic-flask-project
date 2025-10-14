@@ -4,7 +4,7 @@ import requests
 # Configuration
 namespace = "default"  # Change if using a different namespace
 app_label = "flask-app"
-app_url = "http://<LOAD_BALANCER_IP_OR_DNS>"  # Replace with your service external URL
+app_url = "http://ae983ef59d379451e9cdbb99b9a1a589-82699800.us-east-1.elb.amazonaws.com"  # Replace with your service external URL
 
 def check_pods():
     cmd = f"kubectl get pods -n {namespace} -l app={app_label} -o jsonpath='{{.items[*].status.containerStatuses[*].ready}}'"
