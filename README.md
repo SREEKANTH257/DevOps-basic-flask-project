@@ -10,18 +10,43 @@ A basic Flask project demonstrating core DevOps concepts: containerization with 
 
 **Architecture**
 
-User → Flask App (Docker) →[Kubernetes → AWS ECR (CI/CD) → Monitoring
+User → Flask App (Docker) →Kubernetes → AWS ECR (CI/CD) → Monitoring
 
 # Project Structure
 
-/ (root)
-├── app/            # Flask app code
-├── k8s/            # Kubernetes manifests
-├── helm-chart/     # Helm deployment templates
-├── Dockerfile
-├── requirements.txt
-├── .github/
-└── README.md
+devops-project/
+│
+├── infrastructure/
+│   ├── terraform/
+│   │   ├── main.tf                # Main Terraform configuration (VPC, EKS cluster, IAM roles)
+│   │   ├── variables.tf           # Input variables definitions
+│   │   ├── outputs.tf             # Output values (e.g., cluster endpoint)
+│   │   ├── versions.tf            # Terraform and provider version requirements
+│   │   ├── worker-nodes.tf        # Worker nodes and node group config
+│   │   └── provider.tf            # AWS provider config
+│   │
+│   └── scripts/
+│       └── setup-eks.sh           # Optional helper scripts for setup
+│
+├── application/
+│   ├── Dockerfile                 # Dockerfile for app container
+│   └── src/                      # Application source code files
+│
+├── cicd/
+│   ├── Jenkinsfile                # Jenkins pipeline script
+│   └── gitlab-ci.yml              # GitLab CI pipeline config
+│
+├── monitoring/
+│   ├── prometheus/
+│   └── grafana/
+│
+├── automation-scripts/
+│   ├── backup.py                 # Python backup scripts
+│   ├── health-check.sh           # Bash health check scripts
+│   └── cleanup.ps1               # PowerShell cleanup scripts
+│
+└── README.md                     # Project overview and instructions
+
 
 
 **Prerequisites**
@@ -68,6 +93,7 @@ The app will run locally at http://localhost:5000/.
 
 # Acknowledgements
 I was inspired by the daily tasks and hands-on experiences I gained in my previous roles, where I worked extensively with Flask, Docker, Kubernetes, and AWS. These technologies were integral to my day-to-day responsibilities, and I used them to build and deploy scalable applications. By leveraging these tools, I was able to showcase my expertise in modern DevOps best practices and cloud-native development.
+**Note:** This project is still a work in progress, and I'm continually improving and adding new features as I refine my DevOps skills. Feel free to contribute, and any suggestions or feedback are always welcome!
 
 # Contributing
 Pull requests and contributions are welcome please open an issue to discuss changes or major features in advance.
