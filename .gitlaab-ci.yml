@@ -8,3 +8,4 @@ health_check:
   tags:
     - your-runner-tag  # Replace with your actual GitLab runner tag, or remove if not using tags
 
+
