@@ -70,4 +70,4 @@ The app will run locally at http://localhost:5000/.
 I was inspired by the daily tasks and hands-on experiences I gained in my previous roles, where I worked extensively with Flask, Docker, Kubernetes, and AWS. These technologies were integral to my day-to-day responsibilities, and I used them to build and deploy scalable applications. By leveraging these tools, I was able to showcase my expertise in modern DevOps best practices and cloud-native development.
 
 # Contributing
-Pull requests and contributions are welcome—please open an issue to discuss changes or major features in advance.>
+Pull requests and contributions are welcome please open an issue to discuss changes or major features in advance.
